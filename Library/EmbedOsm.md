@@ -111,7 +111,7 @@ function osm_location(qry, height, zoom)
   local name = data.features[1].properties.name or qry
 
   -- Delegate to embed_latlng with the resolved coordinates
-  return embed_latlng(lat .. ", " .. lon, height, zoom)
+  return osm_latlng(lat .. ", " .. lon, height, zoom)
 end
 
 ```
