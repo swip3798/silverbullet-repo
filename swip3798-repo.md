@@ -5,7 +5,7 @@ tags: meta/repository
 ## Travel Planning 
 ```#meta/library/remote
 name: "🗂️ OpenStreetMap Widget for SilverBullet"
-uri: github:swip3798/silverbullet-repo/Library/EmbedOsm.md
+uri: https://codeberg.org/swip3798/silverbullet-repo/raw/branch/main/Library/EmbedOsm.md
 website: https://github.com/swip3798/silverbullet-repo/blob/main/Library/EmbedOsm.md
 description: "Embedded OpenStreetMap widget"
 ---
