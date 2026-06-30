@@ -7,7 +7,7 @@ pageDecoration.prefix: "🗺️"
 
 ## The widget accepts the following arguments:
 
-### embed_latlng
+### osm_latlng
 *   `qry` - required - Coordinates in `"lat, lon"` format (e.g., `"48.8566, 2.3522"`)
 *   `height` - optional - in pixels, default is `480`
 *   `zoom` - optional
@@ -15,7 +15,7 @@ pageDecoration.prefix: "🗺️"
     *   default: `14`
     *   max: `19` (OSM's maximum for embed)
 
-### embed_location
+### osm_location
 *   `qry` - required - A place name, address, or search query (e.g., `"London"`, `"Statue of Liberty"`, `"Eiffel Tower, Paris"`)
 *   `height` - optional - in pixels, default is `480`
 *   `zoom` - optional, default is `14`
@@ -23,15 +23,15 @@ pageDecoration.prefix: "🗺️"
 ⚠️ Undeclared/Empty arguments must be skipped with double-quotes `""``
 
 ## Example:
-${embed_latlng("48.8566, 2.3522","400","")}
+${osm_latlng("48.8566, 2.3522","400","")}
 
-${embed_latlng("40.6892, -74.0445","480","15")}
+${osm_latlng("40.6892, -74.0445","480","15")}
 
-${embed_location("Karlsruhe","","14")}
+${osm_location("Karlsruhe","","14")}
 
 ## Implementation
 ```space-lua
-function embed_latlng(qry, height, zoom)
+function osm_latlng(qry, height, zoom)
   -- Set default values
   local height = height or "480"
   local zoom = zoom or "14"
@@ -82,7 +82,7 @@ function embed_latlng(qry, height, zoom)
 end
 
 
-function embed_location(qry, height, zoom)
+function osm_location(qry, height, zoom)
   -- Set defaults (height and zoom will be passed through to embed_latlng)
   local height = height or "480"
   local zoom = zoom or "14"
