@@ -3,7 +3,7 @@ name: "Library/swip3798/EmbedOsm"
 tags: meta/library
 pageDecoration.prefix: "🗺️"
 ---
-# # Embed OpenStreetMap in your pages
+# Embed OpenStreetMap in your pages
 
 ## The widget accepts the following arguments:
 
